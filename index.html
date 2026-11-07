@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Google</title>
+<style>
+body{font-family:Arial;text-align:center;margin:0}
+#home{padding-top:150px}
+.logo{font-size:65px;font-weight:bold}
+input{width:70%;max-width:500px;padding:15px;border:1px solid #ddd;border-radius:30px;font-size:18px}
+button{padding:12px 25px;margin:20px;border:0;border-radius:6px;cursor:pointer}
+#troll{display:none;background:#000;color:white;position:fixed;inset:0;align-items:center;justify-content:center;flex-direction:column}
+#troll h1{font-size:clamp(40px,10vw,100px)}
+</style>
+</head>
+<body>
+<div id="home">
+<div class="logo">
+<span style="color:#4285f4">G</span><span style="color:#ea4335">o</span><span style="color:#fbbc05">o</span><span style="color:#4285f4">g</span><span style="color:#34a853">l</span><span style="color:#ea4335">e</span>
+</div>
+<p>Tìm kiếm thông tin trên Internet</p>
+<input id="search" placeholder="Tìm kiếm trên Google">
+<br>
+<button onclick="prank()">Tìm kiếm Google</button>
+<button onclick="prank()">Xem trang ngẫu nhiên</button>
+</div>
+<div id="troll">
+<h1>MÀY GAY 🌈</h1>
+<h2>HAHAHAHA BỊ LỪA RỒI!</h2>
+</div>
+<script>
+function prank(){
+document.getElementById('home').style.display='none';
+document.getElementById('troll').style.display='flex';
+document.title='MÀY GAY';
+}
+document.getElementById('search').addEventListener('keydown',function(e){
+if(e.key==='Enter')prank();
+});
+</script>
+</body>
+</html>
